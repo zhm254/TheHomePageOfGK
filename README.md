@@ -1,1 +1,1 @@
-# CopyingTheHomePageOfTheOfficialWebsiteOfGuangdongVocationalCollegeOfScienceAndTechnology
+# 	此页面是PC端的页面，该页面模仿了广东科学技术职业学院的官网首页。	本人主要运用了DIV+CSS实现了布局，并且也写了一点JS代码实现了简单的轮播图和导航栏，从而带来了简单的交互效果。
