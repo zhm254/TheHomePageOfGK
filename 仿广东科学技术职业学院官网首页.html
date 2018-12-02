@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>广东科学技术职业学院</title>
+		<style type="text/css">
+			body {
+				background-color: #CCCCCC;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.outer-container {
+				width: 1000px;
+				margin: 0 auto;
+				height: 800px;
+			}
+			
+			.header {
+				display: flex;
+			}
+			
+			.header-right {
+				width: 388px;
+				height: 107px;
+				background-image: url(http://www.gdit.edu.cn/_upload/tpl/00/1a/26/template26/images/index_02.jpg);
+				position: relative;
+			}
+			
+			.language {
+				position: relative;
+				left: 190px;
+				top: 40px;
+			}
+			
+			.language a {
+				color: black;
+				font-size: 12px;
+			}
+			
+			.search {
+				position: relative;
+				left: 160px;
+				top: 50px;
+			}
+			
+			.search-input {
+				width: 156px;
+				height: ;
+				line-height: 26px;
+			}
+			
+			.search-button {
+				width: 50px;
+				height: 24px;
+				background-color: #1E90FF;
+				border: 0;
+				color: white;
+			}
+			
+			.nav {
+				width: 1000px;
+				height: 38px;
+				background-color: #1E90FF;
+			}
+			
+			.nav ul {
+				list-style: none;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				color: white;
+				height: 38px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.nav ul li {
+				display: inline-block;
+				height: 38px;
+				position: relative;
+			}
+			
+			.nav ul li a {
+				display: inline-block;
+				height: 38px;
+				color: white;
+				line-height: 38px;
+			}
+			
+			.hidden-ul1 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 130px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul2 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 170px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul3 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 60px;
+				left: 0;
+				color: white;
+				align-items: flex-start !important;
+			}
+			
+			.hidden-ul4 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 130px;
+				left: 0;
+				color: white;
+				align-items: flex-start !important;
+			}
+			
+			.hidden-ul5 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 95px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul6 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 80px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul7 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 60px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul8 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 60px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul9 {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				color: white;
+			}
+			
+			.hidden-ul-div1 {
+				display: none;
+				background-color: #1E90FF;
+				height: 230px;
+			}
+			
+			.hidden-ul-div2 {
+				display: none;
+				background-color: #1E90FF;
+				height: 310px;
+			}
+			
+			.hidden-ul-div3 {
+				display: none;
+				background-color: #1E90FF;
+				height: 90px;
+			}
+			
+			.hidden-ul-div4 {
+				display: none;
+				background-color: #1E90FF;
+				height: 230px;
+			}
+			
+			.hidden-ul-div5 {
+				display: none;
+				background-color: #1E90FF;
+				height: 160px;
+			}
+			
+			.hidden-ul-div6 {
+				display: none;
+				background-color: #1E90FF;
+				height: 130px;
+			}
+			
+			.hidden-ul-div7 {
+				display: none;
+				background-color: #1E90FF;
+				height: 90px;
+			}
+			
+			.hidden-ul-div8 {
+				display: none;
+				background-color: #1E90FF;
+				height: 90px;
+			}
+			
+			.hidden-ul-div9 {
+				display: none;
+				background-color: #1E90FF;
+				height: 40px;
+			}
+			
+			ul li {
+				white-space: nowrap;
+			}
+			
+			.middle {
+				display: flex;
+			}
+			
+			.middle-right {
+				background-color: white;
+				width: 388px;
+				height: 356px;
+			}
+			
+			.middle-right-content {
+				width: 374px;
+				height: 140px;
+				margin: 6px 6px;
+				border: solid 1px dodgerblue;
+				display: flex;
+			}
+			
+			.middle-right-theme {
+				border-right: solid 1px dodgerblue;
+				height: 140px;
+				width: 32px;
+				background-color: dodgerblue;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+			}
+			
+			.text-container {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: dashed 0.5px dodgerblue;
+				padding: 3px 0;
+				font-family: SimSun;
+				font-size: 13px;
+				color: black;
+			}
+			
+			.theme-content-div {
+				width: 343px;
+				margin: 0 6px;
+			}
+			
+			.more {
+				display: flex;
+				justify-content: flex-end;
+				font-size: 14px;
+				color: dodgerblue;
+			}
+			
+			.middle-right-bottom {
+				background-color: #1E90FF;
+				height: 48px;
+				margin: 0 6px;
+			}
+			
+			.middle-right-bottom-top {
+				display: flex;
+				justify-content: space-around;
+				padding: 2px 0;
+			}
+			
+			.middle-right-bottom-top div a {
+				color: white !important;
+				font-size: 15px !important;
+			}
+			
+			.middle-right-bottom-bottom {
+				display: flex;
+				justify-content: space-around;
+			}
+			
+			.middle-right-bottom-bottom div a {
+				color: white !important;
+				font-size: 15px !important;
+			}
+			
+			.images {
+				background-color: white;
+			}
+			
+			.images-row {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.end {
+				width: 1000px;
+				height: 90px;
+				background-color: white;
+			}
+			
+			.end-pic {
+				float: left;
+			}
+			
+			.end-text {
+				font-family: SimSun;
+				font-size: 13px;
+				color: black;
+				text-align: center;
+				padding-top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			var images = ["http://www.gdit.edu.cn/_upload/article/e0/92/152f4ffe4286893409b7252067ed/c73293c6-2191-4620-baee-7034d25708bc.jpg",
+				"http://www.gdit.edu.cn/_upload/article/21/1f/c644a30647c5abceee6a87e7820e/b7b1ae37-f801-4e2c-a495-2d7353e9fc28.jpg",
+				"http://www.gdit.edu.cn/_upload/article/c9/b7/eab9904b42fc978611d784a582a8/53966fca-deef-4cf5-b8e4-b4348537eb06.jpg"
+			];
+			var i = 0
+
+			function changeImg() {
+				var img = document.getElementById("changeImgId");
+				i++;
+				if(i > 2) {
+					i = 0;
+				}
+				img.src = images[i];
+
+			}
+			setInterval("changeImg()", 2000);
+
+			function MouseOverHandler(id) {
+				var obj = document.getElementById(id);
+				obj.style.display = "block";
+			}
+
+			function MouseOverHandler1(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler2(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler3(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler4(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler5(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler6(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler7(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler8(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOverHandler9(id) {
+
+				MouseOverHandler(id);
+			}
+
+			function MouseOutHandler(id) {
+				var obj = document.getElementById(id);
+				obj.style.display = "none";
+			}
+
+			function MouseOutHandler1(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler2(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler3(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler4(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler5(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler6(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler7(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler8(id) {
+				MouseOutHandler(id);
+			}
+
+			function MouseOutHandler9(id) {
+				MouseOutHandler(id);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="outer-container">
+			<div class="header">
+				<div class="header-left">
+					<img src="http://www.gdit.edu.cn/_upload/tpl/00/1a/26/template26/images/index_01.jpg" width="612" height="107" />
+				</div>
+				<div class="header-right">
+					<div class="language">
+						<a href="javascript:;">English</a>&nbsp;|
+						<a href="javascript:;">怀旧版</a>&nbsp;|
+						<a href="javascript:;">校内版</a>
+					</div>
+					<div class="search">
+						<input type="text" placeholder="请输入关键字" class="search-input" />
+						<input type="button" value="搜索" class="search-button" />
+					</div>
+				</div>
+			</div>
+			<div class="nav">
+				<ul>
+					<li onmouseout="MouseOutHandler1('hidden-ul-div1')" onmouseover="MouseOverHandler1('hidden-ul-div1')">
+						<a href="javascript:;">新闻中心</a>
+						<div class="hidden-ul-div1" id="hidden-ul-div1">
+
+							<ul class="hidden-ul1">
+								<li>
+									<a href="javascript:;">官方微博</a>
+								</li>
+								<li>
+									<a href="javascript:;">电子校报</a>
+								</li>
+								<li>
+									<a href="javascript:;">校园视频</a>
+								</li>
+								<li>
+									<a href="javascript:;">媒体广科</a>
+								</li>
+								<li>
+									<a href="javascript:;">校园快讯</a>
+								</li>
+								<li>
+									<a href="javascript:;">学校要闻</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler2('hidden-ul-div2')" onmouseover="MouseOverHandler2('hidden-ul-div2')">
+						<a href="javascript:;">学校概况</a>
+						<div class="hidden-ul-div2" id="hidden-ul-div2">
+
+							<ul class="hidden-ul2">
+								<li>
+									<a href="javascript:;">学校简介</a>
+								</li>
+								<li>
+									<a href="javascript:;">现任领导</a>
+								</li>
+								<li>
+									<a href="javascript:;">专家教授</a>
+								</li>
+								<li>
+									<a href="javascript:;">校徽校训</a>
+								</li>
+								<li>
+									<a href="javascript:;">管理架构</a>
+								</li>
+								<li>
+									<a href="javascript:;">办学历史</a>
+								</li>
+								<li>
+									<a href="javascript:;">学校风貌</a>
+								</li>
+								<li>
+									<a href="javascript:;">地理位置</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler3('hidden-ul-div3')" onmouseover="MouseOverHandler3('hidden-ul-div3')">
+						<a href="javascript:;">机构设置</a>
+						<div class="hidden-ul-div3" id="hidden-ul-div3">
+
+							<ul class="hidden-ul3">
+
+								<li>
+									<a href="javascript:;">人事处</a>
+								</li>
+
+								<li>
+									<a href="javascript:;">教务处</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler4('hidden-ul-div4')" onmouseover="MouseOverHandler4('hidden-ul-div4')">
+						<a href="javascript:;">教学院系</a>
+						<div class="hidden-ul-div4" id="hidden-ul-div4">
+
+							<ul class="hidden-ul4">
+
+								<li>
+									<a href="javascript:;">建工学院</a>
+								</li>
+								<li>
+									<a href="javascript:;">人文学院</a>
+								</li>
+								<li>
+									<a href="javascript:;">体育系</a>
+								</li>
+								<li>
+									<a href="javascript:;">商学院</a>
+								</li>
+								<li>
+									<a href="javascript:;">机电学院</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler5('hidden-ul-div5')" onmouseover="MouseOverHandler5('hidden-ul-div5')">
+						<a href="javascript:;">教学教务</a>
+						<div class="hidden-ul-div5" id="hidden-ul-div5">
+
+							<ul class="hidden-ul5">
+								<li>
+									<a href="javascript:;">学籍管理</a>
+								</li>
+								<li>
+									<a href="javascript:;">考务管理</a>
+								</li>
+								<li>
+									<a href="javascript:;">教务管理</a>
+								</li>
+								<li>
+									<a href="javascript:;">规章制度</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler6('hidden-ul-div6')" onmouseover="MouseOverHandler6('hidden-ul-div6')">
+						<a href="javascript:;">科学研究</a>
+						<div class="hidden-ul-div6" id="hidden-ul-div6">
+
+							<ul class="hidden-ul6">
+								<li>
+									<a href="javascript:;">政策法规</a>
+								</li>
+								<li>
+									<a href="javascript:;">办事指南</a>
+								</li>
+								<li>
+									<a href="javascript:;">科研成果</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler7('hidden-ul-div7')" onmouseover="MouseOverHandler7('hidden-ul-div7')">
+						<a href="javascript:;">校园生活</a>
+						<div class="hidden-ul-div7" id="hidden-ul-div7">
+
+							<ul class="hidden-ul7">
+								<li>
+									<a href="javascript:;">公交线路</a>
+								</li>
+								<li>
+									<a href="javascript:;">年度校历</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler8('hidden-ul-div8')" onmouseover="MouseOverHandler8('hidden-ul-div8')">
+						<a href="javascript:;">招生就业</a>
+						<div class="hidden-ul-div8" id="hidden-ul-div8">
+
+							<ul class="hidden-ul8">
+								<li>
+									<a href="javascript:;">就业信息</a>
+								</li>
+								<li>
+									<a href="javascript:;">招生信息</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li onmouseout="MouseOutHandler9('hidden-ul-div9')" onmouseover="MouseOverHandler9('hidden-ul-div9')">
+						<a href="javascript:;">信息公开</a>
+						<div class="hidden-ul-div9" id="hidden-ul-div9">
+
+							<ul class="hidden-ul9">
+								<li>
+									<a href="javascript:;">学风建设</a>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="javascript:;">图书馆</a>
+					</li>
+					<li>
+						<a href="javascript:;">信息门户</a>
+					</li>
+				</ul>
+			</div>
+			<div class="middle">
+				<div class="middle-left">
+					<img src="http://www.gdit.edu.cn/_upload/article/e0/92/152f4ffe4286893409b7252067ed/c73293c6-2191-4620-baee-7034d25708bc.jpg" width="612px" height="355px" id="changeImgId" />
+				</div>
+				<div class="middle-right">
+					<div class="middle-right-content">
+						<div class="middle-right-theme">
+							校<br />园<br />资<br />讯
+						</div>
+						<div class="theme-content-div">
+							<div>
+								<a href="javascript:;" class="more">>>更多</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										澳大利亚科廷大学师生来校交流
+									</div>
+									<div>
+										2018-11-23
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										欢迎珠海市第一中等职业学校来我...
+									</div>
+									<div>
+										2018-11-23
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										文传学院学生向学校保卫处赠送“...
+									</div>
+									<div>
+										2018-11-22
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										对误入歧途的学生“永无言弃，永...
+									</div>
+									<div>
+										2018-11-21
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										副校长刘锦铭到财金学院做辅导报...
+									</div>
+									<div>
+										2018-11-21
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="middle-right-content">
+						<div class="middle-right-theme">
+							通<br />知<br />公<br />告
+						</div>
+						<div class="theme-content-div">
+							<div>
+								<a href="javascript:;" class="more">>>更多</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										广东科学技术职业学院校迎评倡议...
+									</div>
+									<div>
+										2018-11-23
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										关于在拍摄毕业照期间加强学生管...
+									</div>
+									<div>
+										2018-11-23
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										职业院校评估自评报告
+									</div>
+									<div>
+										2018-11-23
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										关于申报2018年广东省依法治校示...
+									</div>
+									<div>
+										2018-11-22
+									</div>
+								</a>
+							</div>
+							<div>
+								<a href="javascript:;" class="text-container">
+									<div>
+										早睡早起，健康中国
+									</div>
+									<div>
+										2018-11-21
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="middle-right-bottom">
+						<div class="middle-right-bottom-top">
+							<div>
+								<a href="javascript:;">校园视频</a>
+							</div>
+							<div>
+								<a href="javascript:;">招生信息</a>
+							</div>
+							<div>
+								<a href="javascript:;">年度校历</a>
+							</div>
+						</div>
+						<div class="middle-right-bottom-bottom">
+							<div>
+								<a href="javascript:;">大学生应用写作</a>
+							</div>
+							<div>
+								<a href="javascript:;">校友会</a>
+							</div>
+							<div>
+								<a href="javascript:;">校报在线</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="images">
+				<div class="images-row">
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/535a50f5-c610-44ba-8222-d62f5742ba3d.jpg" width="160px" height="45px" /></a>
+					</div>
+				</div>
+				<div class="images-row">
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="http://www.gdit.edu.cn/_upload/article/71/5c/8e6c3e4c4e23b12529594a889719/4ea8bc4f-0a0d-490b-8dc5-ca8d813a9ef3.jpg" width="160px" height="45px" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="end">
+				<div class="end-pic">
+					<img src="http://dcs.conac.cn/image/blue.png" width="80px" height="80px" />
+				</div>
+				<div class="end-text">
+					<div>友情链接：&nbsp;广东省科技厅&nbsp;广东省教育厅&nbsp;珠海市人才网&nbsp;教育网高速资源指南&nbsp;后台登陆</div>
+					<div>广州校区地址：广州市天河区科华街351号(邮编:510640)&nbsp;珠海校区地址：珠海市金湾区珠海大道南侧65号(邮编：519090)</div>
+					<div>邮箱：webmaster@gdit.edu.cn　电话：(广州)020-85297309&nbsp;(珠海)0756-7796288&nbsp;传真：020-85291714</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
